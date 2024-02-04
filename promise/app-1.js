@@ -50,3 +50,30 @@ requestPromise('google.com')
     .catch((error) => {
         console.log('error', error);
     });
+
+    // latihan promise lagi :
+
+    const contohPromise = () =>{
+        return new Promise((resolve, reject) => {
+        resolve(() => {});
+        reject(() => {});
+    });
+}
+
+// latihan lagi lagi
+
+const delayColorChange = (color,delay) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            document.body.style.background = color;
+            resolve();
+            },delay);
+        });
+    };
+
+    delayColorChange('red',1300)
+    .then(()=> delayColorChange('green',1000))
+    .then(()=> delayColorChange('red',1000))
+    .then(()=> delayColorChange('yellow',1000))
+    .then(()=> delayColorChange('black',1000))
+    .then(()=> delayColorChange('orange',1000))
