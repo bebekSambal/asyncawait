@@ -1,3 +1,5 @@
+// asynch
+
 const hello = async () => {
 	// throw 'Maaf gak kenal';
 	return 'Hello World';
@@ -10,3 +12,11 @@ hello()
 	.catch((err) => {
 		console.log('error', err);
 	});
+
+// ----------------------------------------------
+
+// await
+
+async function changeColors(colors) {
+	
+}
